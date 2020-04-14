@@ -15,4 +15,4 @@ return [
 
   'controllers_path' => __DIR__ . '/app/controllers',
   'views_path' => __DIR__ . '/views',
-]
+];
