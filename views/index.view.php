@@ -1,23 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Index</title>
-  <!-- styles -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
-  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
-</head>
+<?php require view('includes/head'); ?>
 
 <body>
-  <main>
-    <ul>
-      <?php foreach ($tasks as $task) : ?>
-        <li><?= $task->title; ?></li>
-      <?php endforeach; ?>
-    </ul>
-  </main>
+  <?php require view('includes/nav'); ?>
+  <section class="section">
+    <div class="columns">
+      <div class="column border-r-2"></div>
+      <div class="column">
+        <section class="section">
+          <ul>
+            <?php foreach ($tasks as $task) :  ?>
+              <li class="mt-2 text-2xl font-semibold">
+                <?php if ($task->completed) : ?>
+                  <strik><?= $task->title ?></strik>
+                <?php else : ?>
+                  <?= $task->title ?>
+                <?php endif; ?>
+              </li>
+            <?php endforeach ?>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </section>
 </body>
 
 </html>
