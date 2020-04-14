@@ -11,7 +11,13 @@
 </head>
 
 <body>
-  <h1>Hello, World</h1>
+  <main>
+    <ul>
+      <?php foreach ($tasks as $task) : ?>
+        <li><?= $task->title; ?></li>
+      <?php endforeach; ?>
+    </ul>
+  </main>
 </body>
 
 </html>
