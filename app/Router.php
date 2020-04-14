@@ -11,7 +11,7 @@ class Router
 
   public function define($uri, $controllerName)
   {
-    $this->routes[trim($uri, '/')] = controllers_path() . $controllerName . '.php';
+    $this->routes[trim($uri, '/')] = controller($controllerName);
   }
 
   public static function load($routesPath)
