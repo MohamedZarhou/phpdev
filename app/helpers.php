@@ -16,3 +16,8 @@ function view($view_name)
 {
   return view_path() . $view_name . '.view.php';
 }
+
+function controllers_path()
+{
+  return __DIR__ . "/controllers/";
+}
