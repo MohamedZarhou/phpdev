@@ -9,7 +9,8 @@ function dd($message)
 
 function view_path()
 {
-  return __DIR__ . '/../views/';
+  global $config;
+  return rtrim($config['views_path'], '/') . '/';
 }
 
 function view($view_name)
@@ -19,5 +20,11 @@ function view($view_name)
 
 function controllers_path()
 {
-  return __DIR__ . "/controllers/";
+  global $config;
+  return rtrim($config['controllers_path'], '/') . '/';
+}
+
+function controller($controllerName)
+{
+  return controllers_path() . $controllerName . '.php';
 }
