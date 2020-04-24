@@ -11,7 +11,7 @@ class QueryBuilder
 
   public function selectAll($table)
   {
-    $statement = $this->pdo->prepare("select * from {$todos}");
+    $statement = $this->pdo->prepare("select * from {$table}");
 
     try {
       $statement->execute();
