@@ -4,10 +4,7 @@
       <a href="/" class="px-4 py-2 text-white font-semibold">Home</a>
     </li>
     <li class="ml-2">
-      <a href="/about" class="px-4 py-2 text-white font-semibold">About</a>
-    </li>
-    <li class="ml-2">
-      <a href="/contact" class="px-4 py-2 text-white font-semibold">Contact</a>
+      <a href="/create" class="px-4 py-2 text-white font-semibold">Create</a>
     </li>
   </ul>
 </nav>
