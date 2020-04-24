@@ -29,10 +29,10 @@ class Router
     return $router;
   }
 
-  public function direct($uri)
+  public function direct($uri, $request_method)
   {
-    if (array_key_exists($uri, $this->routes))
-      return $this->routes[$uri];
+    if (array_key_exists($uri, $this->routes[$request_method]))
+      return $this->routes[$request_method][$uri];
 
     throw new Exception("No route match this uri");
   }
