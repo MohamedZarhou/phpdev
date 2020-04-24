@@ -6,12 +6,20 @@ class Router
 
   public function __construct()
   {
-    $this->routes = [];
+    $this->routes = [
+      "GET" => [],
+      "POST" => []
+    ];
   }
 
-  public function define($uri, $controllerName)
+  public function get($uri, $controllerName)
   {
-    $this->routes[trim($uri, '/')] = controller($controllerName);
+    $this->routes["GET"][trim($uri, '/')] = controller($controllerName);
+  }
+
+  public function post($uri, $controllerName)
+  {
+    $this->routes["POST"][trim($uri, '/')] = controller($controllerName);
   }
 
   public static function load($routesPath)
