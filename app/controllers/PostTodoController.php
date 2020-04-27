@@ -1,6 +1,6 @@
 <?php
 
-$query->insertInto('todos', [
+App::get('query')->insertInto('todos', [
   'title' => $_POST['title'],
   'description' => $_POST['description']
 ]);

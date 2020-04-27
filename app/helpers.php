@@ -9,8 +9,7 @@ function dd($message)
 
 function view_path()
 {
-  global $config;
-  return rtrim($config['views_path'], '/') . '/';
+  return rtrim(App::get('config')['views_path'], '/') . '/';
 }
 
 function view($view_name)
@@ -20,8 +19,7 @@ function view($view_name)
 
 function controllers_path()
 {
-  global $config;
-  return rtrim($config['controllers_path'], '/') . '/';
+  return rtrim(App::get('config')['controllers_path'], '/') . '/';
 }
 
 function controller($controllerName)

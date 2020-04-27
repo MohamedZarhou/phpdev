@@ -1,8 +1,14 @@
 <?php
 
-
 require __DIR__ . '/helpers.php';
 
-$config = require __DIR__ . '/../config.php';
+App::bind('config', require __DIR__ . '/../config.php');
 
-$query = new QueryBuilder(Connection::make($config['database']));
+App::bind(
+    'query',
+    new QueryBuilder(
+        Connection::make(
+            App::get('config')['database']
+        )
+    )
+);

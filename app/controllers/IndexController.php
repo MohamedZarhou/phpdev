@@ -1,5 +1,5 @@
 <?php
 
-$tasks = $query->selectAll('todos');
+$tasks = App::get('query')->selectAll('todos');
 
 require view('index');
