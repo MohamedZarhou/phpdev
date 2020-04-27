@@ -1,7 +1,8 @@
 <?php
 
-require '../app/bootstrap.php';
+require __DIR__ . '/../vendor/autoload.php';
 
+require '../app/bootstrap.php';
 
 try {
   require Router::load(__DIR__ . '/../routes.php')->direct(Request::uri(), Request::method());
