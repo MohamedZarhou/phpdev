@@ -12,9 +12,10 @@ function view_path()
   return rtrim(App::get('config')['views_path'], '/') . '/';
 }
 
-function view($view_name)
+function view($view_name, $vars = [])
 {
-  return view_path() . $view_name . '.view.php';
+  extract($vars);
+  return require view_path() . $view_name . '.view.php';
 }
 
 function controllers_path()
@@ -25,4 +26,9 @@ function controllers_path()
 function controller($controllerName)
 {
   return controllers_path() . $controllerName . '.php';
+}
+
+function redirect($path)
+{
+  header("location:{$path}", true, 200);
 }

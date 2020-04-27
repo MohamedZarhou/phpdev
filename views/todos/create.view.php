@@ -1,5 +1,4 @@
-<?php require view('includes/head'); ?>
-<?php require view('includes/nav'); ?>
+<?php view('includes/head'); ?>
 
 
 <section class="section">
@@ -24,4 +23,4 @@
 </section>
 
 
-<?php require view('includes/footer'); ?>
+<?php view('includes/footer'); ?>
