@@ -1,6 +1,6 @@
 <?php
 
-$query->insertInto('todoss', [
+$query->insertInto('todos', [
   'title' => $_POST['title'],
   'description' => $_POST['description']
 ]);
