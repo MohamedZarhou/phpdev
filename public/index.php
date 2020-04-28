@@ -2,7 +2,7 @@
 
 require __DIR__ . '/../vendor/autoload.php';
 
-require '../app/bootstrap.php';
+require '../core/bootstrap.php';
 
 try {
   Router::load(__DIR__ . '/../routes.php')
