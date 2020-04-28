@@ -1,5 +1,9 @@
 <?php
 
+namespace Core;
+
+use Exception;
+
 class Router
 {
   public $routes;
@@ -42,6 +46,8 @@ class Router
 
   protected function callControllerAction($controller, $method)
   {
+    $controller = "App\\Controllers\\{$controller}";
+
     $object = new $controller;
 
     if (!method_exists($object, $method)) {

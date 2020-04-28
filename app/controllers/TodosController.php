@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Controllers;
+
+use Core\App;
+
 class TodosController
 {
   public function index()
@@ -23,6 +27,6 @@ class TodosController
       'description' => $_POST['description']
     ]);
 
-    return redirect('/');
+    return redirect('/todos');
   }
 }

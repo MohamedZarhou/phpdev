@@ -1,5 +1,9 @@
 <?php
 
+namespace Core\Database;
+
+use PDO;
+
 class QueryBuilder
 {
     protected $pdo;
@@ -15,7 +19,7 @@ class QueryBuilder
 
         try {
             $statement->execute();
-        } catch (PDOException $e) {
+        } catch (\PDOException $e) {
             die($e->getMessage());
         }
 
@@ -35,7 +39,7 @@ class QueryBuilder
 
         try {
             $statement->execute($dataArray);
-        } catch (PDOException $e) {
+        } catch (\PDOException $e) {
             die("$sql <br> {$e->getMessage()}");
         }
     }

@@ -1,5 +1,7 @@
 <?php
 
+use Core\App;
+
 function dd($message)
 {
   echo '<pre>';
